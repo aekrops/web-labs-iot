@@ -182,13 +182,29 @@
         margin-right: 24px;
         margin-top: 19px;
     }
+    .contact_us_button:hover,
+    .contact_us_button:focus {
+        border: 3px solid #fdb021;
+        border-radius: 7px;
+        color: #ff7a59 !important;
+        background: rgb(255, 255, 255);
+    }
+    .header_nav ul a:hover,
+    .header_nav ul a:focus {
+        color: #fdf033;
+    }
+    .header_button:hover,
+    .header_button:focus {
+        border: 3px solid #fdb021;
+        border-radius: 15px;
+    }
 }
 
 @media (min-width: 1024px) {
     .header {
         background: url(../assets/background_scene.svg) no-repeat center top;
         position: relative;
-        min-height: 768px;
+        min-height: 1076px;
         padding: 0px 30px 0px;
     }
     .top_container {
@@ -267,6 +283,8 @@
         text-transform: uppercase;
         background: #EE4D47;
         border-radius: 5px;
+        animation-name: rotation;
+        animation-duration: 5s;
     }
     .header_button_text {
         display: flex;
@@ -286,7 +304,7 @@
     .header {
         background: url(../assets/background_scene.svg) no-repeat center top;
         position: relative;
-        height: 1076px;
+        min-height: 1076px;
         margin-top: -8px;
     }
     .top_container {
@@ -363,6 +381,11 @@
         background: #EE4D47;
         border-radius: 5px;
     }
+    .header_button:hover,
+    .header_button:focus {
+        border: 3px solid #fdb021;
+        border-radius: 15px;
+    }
     .header_button_text {
         display: flex;
         flex-direction: column;
@@ -379,6 +402,6 @@
         background: url(../assets/car.svg) no-repeat;
         width: 611px;
         height: 395px;
-        margin: 50px 0px 0px -165px;
+        margin: 40px 0px 0px -165px;
     }
 }

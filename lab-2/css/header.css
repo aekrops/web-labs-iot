@@ -283,8 +283,7 @@
         text-transform: uppercase;
         background: #EE4D47;
         border-radius: 5px;
-        animation-name: rotation;
-        animation-duration: 5s;
+        animation: rotation 5s;
     }
     .header_button_text {
         display: flex;
@@ -403,5 +402,6 @@
         width: 611px;
         height: 395px;
         margin: 40px 0px 0px -165px;
+        transition: margin 3s linear;
     }
 }

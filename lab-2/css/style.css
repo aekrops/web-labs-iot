@@ -1,6 +1,7 @@
 @import "./global.css";
-@import "./header.css";
 @import "./hamburger.css";
+@import "./animations.css";
+@import "./header.css";
 @import "./about_us.css";
 @import "./how_to_apply.css";
 @import "./feedback.css";

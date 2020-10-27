@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(248, 238, 238);
+}
+
+.page__content {
+    display: flex;
+    margin-left: 50px;
+    height: 700px;
+}

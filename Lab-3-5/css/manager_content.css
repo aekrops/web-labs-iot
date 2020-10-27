@@ -1,0 +1,62 @@
+.manager__content {
+    width: 1100px;
+}
+
+.lawyers {
+    margin-top: 70px;
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.main_card-item {
+    width: 300px;
+    color: rgb(241, 231, 231);
+    margin-left: 10px;
+}
+
+.card_info {
+    background-color: #e47357;
+    border-radius: 4px;
+}
+
+.first__name {
+    padding-top: 10px;
+}
+
+.card__id,
+.first__name,
+.second__name,
+.age,
+.price {
+    margin-left: 10px;
+    font-family: 'Comic Neue', cursive;
+    padding-bottom: 10px;
+}
+
+.card_btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn__edit,
+.btn__del {
+    margin: 5px 0px 25px 0px;
+    font-family: 'Comic Neue', cursive;
+    height: 30px;
+    width: 75px;
+    border-color: #e47357;
+    background-color: #e47357;
+    color: white;
+    text-transform: uppercase;
+}
+
+.btn__edit:hover,
+.btn__del:hover {
+    background-color: #ff7038f3;
+}
+
+.btn__edit:active,
+.btn__del:active {
+    background-color: #9e4934;
+}

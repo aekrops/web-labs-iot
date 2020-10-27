@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
+    <script defer src="js/init-firebase.js"></script>
+    <script defer src="js/sketch.js"></script>
+</head>
+
+<body>
+    <header class="menu">
+        <div class="nav__options">
+            <h1>Lawyer manager</h1>
+            <div class="menu__options">
+                <a href="" class="menu__option">Lawyers</a>
+                <a href="create_page/create.html" class="menu__option">Create Lawyer</a>
+            </div>
+        </div>
+        <div class="menu__filter">
+            <input type="text" id="filter" placeholder="First Name\Second Name">
+            <button id="filter_option__search">Search</button>
+            <button id="filter_option__clean">Clean</button>
+        </div>
+
+    </header>
+
+    <div class="page__content">
+        <div class="manager">
+            <div class="lawyers__manager">
+                Lawyers manager:
+            </div>
+            <div class="sort__option">
+                <div class="manager__text">
+                    Sort by the most expensive lawyers
+                </div>
+                <div class="switcher">
+                    <label class="switch">
+                        <input type="checkbox" id="chbox_sort" onchange="sortData()"> 
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="count__option">
+                <div class="total__lawyers">
+                    <div>
+                        Result:
+                    </div>
+                    <div id="lawyersNumber">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="manager__content">
+            <ul id="lawyers__list" class="lawyers">
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

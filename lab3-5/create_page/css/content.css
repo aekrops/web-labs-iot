@@ -21,3 +21,8 @@
     color: white;
     text-transform: uppercase;
 }
+
+.submit__btn:hover,
+.submit__btn:active {
+    background-color: #ff7038f3;
+}

@@ -127,3 +127,45 @@ input:checked+.slider:before {
     margin-right: 10px;
     font-size: 25px;
 }
+
+.input__fields {
+    /* visibility: hidden; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    font-family: 'Comic Neue', cursive;
+}
+
+.input__field {
+    margin-top: 10px;
+    width: 350px;
+    height: 30px;
+    border: none;
+}
+
+.editted_sbmt__btn {
+    margin-top: 13px;
+    height: 35px;
+    border-color: #e2795e;
+    background-color: #e47357;
+    color: white;
+    text-transform: uppercase;
+}
+
+.editted_sbmt__btn:active,
+.editted_sbmt__btn:hover {
+    background-color: #ff7038f3;
+}
+
+.subm_btn {
+    height: 30px;
+    border-color: #e2795e;
+    background-color: #e47357;
+    color: white;
+    text-transform: uppercase;
+}
+
+.subm_btn:active,
+.subm_btn:hover {
+    background-color: #ff7038f3;
+}

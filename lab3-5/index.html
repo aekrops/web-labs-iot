@@ -11,7 +11,7 @@
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-storage.js"></script>
     <script defer src="js/init-firebase.js"></script>
-    <script defer src="js/sketch.js"></script>
+    <script defer src="js/index.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,7 @@
             </div>
         </div>
         <div class="menu__filter">
-            <input type="text" id="filter" placeholder="First Name\Second Name">
-            <button id="filter_option__search">Search</button>
+            <input type="text" class="filter" id="filter__input" placeholder="First Name\Second Name">
             <button id="filter_option__clean">Clean</button>
         </div>
 
@@ -53,9 +52,16 @@
                         Result:
                     </div>
                     <div id="lawyersNumber">
-                        0
                     </div>
                 </div>
+            </div>
+            <div class="input__fields">
+                <h1>Edit&Create</h1>
+                <input type="text" class="input__field" placeholder="First name:" id="firstName">
+                <input type="text" class="input__field" placeholder="Second name:" id="secondName">
+                <input type="text" class="input__field" placeholder="Age:" id="age">
+                <input type="text" class="input__field" placeholder="Price:" id="pricePerHourInDollars">
+                <button type="submit" class="subm_btn" id="" onclick="createLawyer()">Create lawyer</button>
             </div>
         </div>
 

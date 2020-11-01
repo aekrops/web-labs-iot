@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
-    <script defer src="../js/init-firebase.js"></script>
-    <script defer src="../js/write.js"></script>
+
+
 </head>
 
 <body>
@@ -28,10 +28,10 @@
         <input type="text" id="secondName" placeholder="Second Name" class="input__area">
         <input type="number" id="age" placeholder="Age" class="input__area">
         <input type="number" id="pricePerHourInDollars" placeholder="Price per hour" class="input__area">
-        <button id="submit" class="submit__btn">Done</button>
+        <button id="submit" class="submit__btn" onclick="sendToFirebase()">Done</button>
     </div>
-
-
+    <script defer src="../js/init-firebase.js"></script>
+    <script defer src="../js/index.js"></script>
 </body>
 
 </html>

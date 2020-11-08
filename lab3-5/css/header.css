@@ -28,18 +28,20 @@
 }
 
 .menu__filter {
-    margin-right: 100px;
+    margin-right: 185px;
 }
 
 .filter {
-    height: 30px;
+    height: 35px;
     width: 250px;
     border: none;
+    font-size: 16px;
 }
 
 .menu__filter button {
-    height: 30px;
+    height: 35px;
     border-color: #e47357;
     background-color: #e47357;
     color: white;
+    font-size: 16px;
 }

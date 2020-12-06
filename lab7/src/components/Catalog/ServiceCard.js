@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, CardGroup } from "react-bootstrap";
-import App from "../../App";
+import { Card } from "react-bootstrap";
 import { Cards, Button } from "./ServiceCard.styled";
 
 const ServiceCard = () => {
@@ -82,7 +81,7 @@ const ServiceCard = () => {
           }}
           key={index}
         >
-          <Card.Img variant="top" src="holder.js/100px180" src={card.image} />
+          <Card.Img variant="top" src={card.image} />
           <Card.Body
             style={{
               display: "flex",

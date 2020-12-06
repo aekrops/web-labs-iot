@@ -2,7 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 function ItemInfo(props) {
-  console.log("хуйня паше");
+  console.log("niceeeeeeeeee");
   console.log(props.items);
   var item = props.items;
   const pathname = window.location.pathname.split("/").pop();

@@ -40,4 +40,10 @@ export const BuyBtn = styled.button`
     color: #0043a4;
     border: #0043a4 1px solid;
   }
+
+  &:active {
+    color: #b7d4ff;
+    background-color: #0043a4;
+    border-style: none;
+  }
 `;

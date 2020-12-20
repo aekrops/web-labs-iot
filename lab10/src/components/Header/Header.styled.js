@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { FcBriefcase } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
+import { BsArchiveFill } from "react-icons/bs";
 
 export const Nav = styled.nav`
   background: #011b56;
@@ -15,6 +16,10 @@ export const Nav = styled.nav`
   left: 0;
   right: 0;
   z-index: 999;
+`;
+
+export const Cart = styled(BsArchiveFill)`
+  margin-bottom: 10px;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -109,4 +114,12 @@ export const NavLinks = styled(Link)`
       transition: all 0.3s ease;
     }
   }
+`;
+
+export const CartCount = styled.div``;
+
+export const CartFrame = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 50px;
 `;

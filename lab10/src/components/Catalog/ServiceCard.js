@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Cards, ListOfCards, CardsWrapper } from "./ServiceCard.styled";
 import { useList } from "react-firebase-hooks/database";
-import TutorialDataService from "../services/Service";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import ItemInfo from "../Catalog/ItemInfo";
 import {
   Wrapper,
@@ -12,12 +11,12 @@ import {
   Selection,
   FilterWrapper,
   FilterInput,
-  ApplyButton,
 } from "./ControlPanel.styled";
 import "../Catalog/loading.css";
+import { connect } from "react-redux";
 
-function ServiceCard(props) {
-  let [data, loading] = useList(TutorialDataService.getAll());
+function ServiceCard({ database }) {
+  let [data, loading] = useList(database);
   const [service, setService] = useState("");
   const [name, findByName] = useState("");
   const [photo, havePhoto] = useState("");
@@ -51,7 +50,6 @@ function ServiceCard(props) {
             placeholder="Enter name of lawyer"
             onChange={(event) => findByName(event.target.value)}
           ></FilterInput>
-          <ApplyButton>Apply</ApplyButton>
         </FilterWrapper>
       </Wrapper>
       {loading && <div class="loader">Loading...</div>}
@@ -73,7 +71,11 @@ function ServiceCard(props) {
                     }}
                     key={lawyer.key}
                   >
-                    <Card.Img variant="top" src={lawyer.val().image} />
+                    <Card.Img
+                      variant="top"
+                      src={lawyer.val().image}
+                      alt="lawyer"
+                    />
                     <Card.Body
                       style={{
                         display: "flex",
@@ -88,7 +90,7 @@ function ServiceCard(props) {
                           Price: {lawyer.val().pricePerHourInDollars}$ per hour
                         </Card.Text>
                         <Card.Text>Rating: {lawyer.val().rating}/5</Card.Text>
-                        <a href={"catalog/info/" + lawyer.key}>View more</a>
+                        <Link to={"catalog/info/" + lawyer.key}>View more</Link>
                       </>
                     </Card.Body>
                   </Card>
@@ -102,4 +104,10 @@ function ServiceCard(props) {
   );
 }
 
-export default ServiceCard;
+const mapStateToProps = (state) => {
+  return {
+    database: state.lawyerFirm.database,
+  };
+};
+
+export default connect(mapStateToProps)(ServiceCard);

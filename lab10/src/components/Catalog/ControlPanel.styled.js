@@ -38,6 +38,7 @@ export const FilterWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-right: 100px;
 `;
 
 export const FilterInput = styled.input`

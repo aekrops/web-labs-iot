@@ -2,6 +2,8 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Wrapper, BackBtn, Info, BuyBtn } from "./ItemInfo.styled";
+import { connect } from "react-redux";
+import { addToCart } from "../../redux/actions";
 
 function ItemInfo(props) {
   var lawyers = props.data;
@@ -9,6 +11,7 @@ function ItemInfo(props) {
   var selectedLawyer = lawyers.filter((itemSelected) =>
     itemSelected.key.includes(key)
   );
+
   return selectedLawyer.map((lawyer) => (
     <Wrapper>
       <BackBtn>
@@ -37,7 +40,13 @@ function ItemInfo(props) {
               Per service: {lawyer.val().pricePerHourInDollars}$
             </Card.Text>
             <Card.Text>Rating: {lawyer.val().rating} ☆</Card.Text>
-            <BuyBtn>Order a service</BuyBtn>
+            <BuyBtn
+              onClick={() => {
+                props.addToCart(lawyer.val().key);
+              }}
+            >
+              Order a service
+            </BuyBtn>
           </>
         </Card.Body>
       </Card>
@@ -50,4 +59,10 @@ function ItemInfo(props) {
   ));
 }
 
-export default ItemInfo;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (key) => dispatch(addToCart(key)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(ItemInfo);

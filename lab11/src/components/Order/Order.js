@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import CustomInput from "./CustomInput";
 import * as yup from "yup";
 
-function Order({ removeAllFromCart }) {
+const Order = ({ removeAllFromCart }) => {
   const history = useHistory();
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   return (
@@ -124,7 +124,7 @@ function Order({ removeAllFromCart }) {
       </Styles>
     </>
   );
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

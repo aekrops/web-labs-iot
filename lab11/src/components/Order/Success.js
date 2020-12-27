@@ -1,11 +1,11 @@
 import React from "react";
-import { Wrapper } from "./Success.styled";
+import { Wrapper, GreatNews } from "./Success.styled";
 
 function Success() {
   return (
     <>
       <Wrapper>
-        <p>Successful operation!!!</p>
+        <GreatNews>Successful operation!!!</GreatNews>
       </Wrapper>
     </>
   );

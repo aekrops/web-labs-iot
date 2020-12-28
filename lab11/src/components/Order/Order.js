@@ -2,12 +2,10 @@ import { Formik, Form } from "formik";
 import { Styles, Title } from "./Order.styled";
 import { connect } from "react-redux";
 import { removeAllFromCart } from "./../../redux/actions";
-import { useHistory } from "react-router-dom";
 import CustomInput from "./CustomInput";
 import * as yup from "yup";
 
 const Order = ({ removeAllFromCart }) => {
-  const history = useHistory();
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   return (
     <>
@@ -41,7 +39,7 @@ const Order = ({ removeAllFromCart }) => {
               .max(16)
               .min(16)
               .required(),
-            cvc: yup.string().label("CVC").min(3).max(4).required(),
+            cvc: yup.string().label("CVC").min(3).max(3).required(),
             expiryMonth: yup
               .string()
               .label("Expiry month")
@@ -61,7 +59,6 @@ const Order = ({ removeAllFromCart }) => {
           onSubmit={(values) => {
             setTimeout(() => {
               console.log(values);
-              history.push("/success");
               removeAllFromCart();
             }, 2000);
           }}
@@ -115,9 +112,12 @@ const Order = ({ removeAllFromCart }) => {
                 label="Phone number"
                 name="phoneNumber"
                 type="number"
-                placeholder="+380963212311"
+                placeholder="0963212311"
               />
-              <button type="submit">Submit</button>
+
+              <button type="submit">
+                <a href="/success">Submit</a>
+              </button>
             </Form>
           )}
         </Formik>

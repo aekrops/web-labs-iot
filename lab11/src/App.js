@@ -20,7 +20,9 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-
+        <Route path="/success">
+          <Success />
+        </Route>
         <Route exact path="/catalog">
           <Catalog />
         </Route>
@@ -32,9 +34,6 @@ function App() {
         </Route>
         <Route path="/cart/order">
           <Order />
-        </Route>
-        <Route path="/success">
-          <Success />
         </Route>
       </Switch>
       <Footer />
